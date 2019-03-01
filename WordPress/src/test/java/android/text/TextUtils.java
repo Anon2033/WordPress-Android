@@ -8,7 +8,7 @@ public class TextUtils {
     /**
      * Duplicates {@link android.text.TextUtils#isEmpty(CharSequence)}.
      */
-    public static boolean isEmpty(CharSequence str) {
+    public static boolean isEmpty(CharSequence str  ) {
         return str == null || str.length() == 0;
     }
 }
