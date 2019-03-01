@@ -43,7 +43,7 @@ jobs:
           command: $GRADLEW checkstyle
       - run:
           name: ktlint
-          command: $GRADLEW ktlint
+          command: $GRADLEW ciktlint
       - run:
           name: Lint
           command: $GRADLEW lintVanillaRelease || (grep -A20 -B2 'severity="Error"' -r --include="*.xml" WordPress libs; exit 1)
