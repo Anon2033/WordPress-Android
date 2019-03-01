@@ -50,7 +50,7 @@ jobs:
       - run:
           name: Violations
           when: on_fail
-          command: $GRADLEW violationCommentsToGitHub -DGITHUB_PULLREQUESTID=$CIRCLE_BUILD_NUM -DGITHUB_OAUTH2TOKEN=$DANGER_GITHUB_API_TOKEN
+          command: $GRADLEW violationCommentsToGitHub -DGITHUB_PULLREQUESTID=${CIRCLE_PULL_REQUEST##*/} -DGITHUB_OAUTH2TOKEN=$DANGER_GITHUB_API_TOKEN
       - android/save-gradle-cache:
           cache-prefix: lint-cache
       - store_artifacts:
